@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{837421FF-8B71-4024-BE63-160467B5DB60}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebApplication8</RootNamespace>
+    <AssemblyName>WebApplication8</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebApplication8.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebApplication8.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.7.1213\lib\45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.4\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Appointment.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AjaxMin.dll" />
+    <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\de\System.Spatial.resources.dll" />
+    <Content Include="bin\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\es\System.Spatial.resources.dll" />
+    <Content Include="bin\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\fr\System.Spatial.resources.dll" />
+    <Content Include="bin\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\HtmlAgilityPack.dll" />
+    <Content Include="bin\HtmlAgilityPack.pdb" />
+    <Content Include="bin\HtmlAgilityPack.xml" />
+    <Content Include="bin\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\it\System.Spatial.resources.dll" />
+    <Content Include="bin\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ja\System.Spatial.resources.dll" />
+    <Content Include="bin\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ko\System.Spatial.resources.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.xml" />
+    <Content Include="bin\Microsoft.Data.OData.dll" />
+    <Content Include="bin\Microsoft.Data.OData.xml" />
+    <Content Include="bin\Microsoft.WindowsAzure.Configuration.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.xml" />
+    <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\pl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ru\System.Spatial.resources.dll" />
+    <Content Include="bin\System.Spatial.dll" />
+    <Content Include="bin\System.Spatial.xml" />
+    <Content Include="bin\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\WebApplication8.dll" />
+    <Content Include="bin\WebApplication8.pdb" />
+    <Content Include="bin\WebApplication8.xml" />
+    <Content Include="bin\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="contact.html" />
+    <Content Include="css\style-reset.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style2.css" />
+    <Content Include="Dentists.html" />
+    <Content Include="HomePage_Ashwin.aspx" />
+    <Content Include="images\arrow.gif" />
+    <Content Include="images\dark_gradient.jpg" />
+    <Content Include="images\Haider.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\Matt.jpg" />
+    <Content Include="images\mays.PNG" />
+    <Content Include="images\page_bottom.jpg" />
+    <Content Include="images\page_tile.jpg" />
+    <Content Include="images\page_top.jpg" />
+    <Content Include="images\seperator.png" />
+    <Content Include="images\seperator_black.png" />
+    <Content Include="images\seperator_red.png" />
+    <Content Include="images\Sid.jpg" />
+    <Content Include="images\signupimage.jpg" />
+    <Content Include="images\slide.png" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\slide2.jpg" />
+    <Content Include="images\slide3.jpg" />
+    <Content Include="images\slide4.jpg" />
+    <Content Include="images\Text.jpg" />
+    <Content Include="images\thumb1.jpg" />
+    <Content Include="images\tooth.jpg" />
+    <Content Include="images\top.jpg" />
+    <Content Include="images\top1.jpg" />
+    <Content Include="images\top_black.jpg" />
+    <Content Include="images\top_red.jpg" />
+    <Content Include="images\Untitled.jpg" />
+    <Content Include="images\Vikram.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\fancybox\fancy_closebox.png" />
+    <Content Include="js\fancybox\fancy_left.png" />
+    <Content Include="js\fancybox\fancy_progress.png" />
+    <Content Include="js\fancybox\fancy_right.png" />
+    <Content Include="js\fancybox\fancy_shadow_e.png" />
+    <Content Include="js\fancybox\fancy_shadow_n.png" />
+    <Content Include="js\fancybox\fancy_shadow_ne.png" />
+    <Content Include="js\fancybox\fancy_shadow_nw.png" />
+    <Content Include="js\fancybox\fancy_shadow_s.png" />
+    <Content Include="js\fancybox\fancy_shadow_se.png" />
+    <Content Include="js\fancybox\fancy_shadow_sw.png" />
+    <Content Include="js\fancybox\fancy_shadow_w.png" />
+    <Content Include="js\fancybox\fancy_title_left.png" />
+    <Content Include="js\fancybox\fancy_title_main.png" />
+    <Content Include="js\fancybox\fancy_title_right.png" />
+    <Content Include="js\fancybox\jquery-1.3.2.min.js" />
+    <Content Include="js\fancybox\jquery.easing.1.3.js" />
+    <Content Include="js\fancybox\jquery.fancybox-1.2.1.js" />
+    <Content Include="js\fancybox\jquery.fancybox-1.2.1.pack.js" />
+    <Content Include="js\fancybox\jquery.fancybox.css" />
+    <Content Include="js\fullcalendar.css" />
+    <Content Include="js\fullcalendar.js" />
+    <Content Include="js\fullcalendar.min.js" />
+    <Content Include="js\fullcalendar.print.css" />
+    <Content Include="js\gcal.js" />
+    <Content Include="js\img\input\input_left-focus.gif" />
+    <Content Include="js\img\input\input_left-hover.gif" />
+    <Content Include="js\img\input\input_left.gif" />
+    <Content Include="js\img\input\input_right-focus.gif" />
+    <Content Include="js\img\input\input_right-hover.gif" />
+    <Content Include="js\img\input\input_right.gif" />
+    <Content Include="js\img\input\input_text_left.gif" />
+    <Content Include="js\img\input\input_text_right.gif" />
+    <Content Include="js\img\textarea\textarea-mm-focus.gif" />
+    <Content Include="js\img\textarea\textarea-mm-hover.gif" />
+    <Content Include="js\img\textarea\textarea-mm.gif" />
+    <Content Include="js\img\textarea\textarea_bl.gif" />
+    <Content Include="js\img\textarea\textarea_bm.gif" />
+    <Content Include="js\img\textarea\textarea_br.gif" />
+    <Content Include="js\img\textarea\textarea_ml.gif" />
+    <Content Include="js\img\textarea\textarea_mr.gif" />
+    <Content Include="js\img\textarea\textarea_tl.gif" />
+    <Content Include="js\img\textarea\textarea_tm.gif" />
+    <Content Include="js\img\textarea\textarea_tr.gif" />
+    <Content Include="js\jqtransform.css" />
+    <Content Include="js\jquery-ui.custom.min.js" />
+    <Content Include="js\jquery.cycle.all.js" />
+    <Content Include="js\jquery.jqtransform.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\legacy.js" />
+    <Content Include="js\picker.date.js" />
+    <Content Include="js\picker.js" />
+    <Content Include="js\picker.time.js" />
+    <Content Include="obj\debug\DTCDental_Integrated_V1_0.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="obj\debug\WebApplication8.dll" />
+    <Content Include="obj\debug\WebApplication8.pdb" />
+    <Content Include="obj\debug\WebApplication8.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\debug\WebApplication8.xml" />
+    <Content Include="obj\Release\CSAutoParameterize.parameters.xml" />
+    <Content Include="obj\Release\DTCDental_Integrated_V1_0.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Package\DTCDental_Integrated_V1_0.SourceManifest.xml" />
+    <Content Include="obj\Release\Package\PackageTmp\Appointment.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\AjaxControlToolkit.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\AjaxMin.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\de\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\es\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\fr\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\HtmlAgilityPack.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\it\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ja\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ko\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Data.Edm.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Data.OData.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.WindowsAzure.Configuration.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\pl\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ru\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Spatial.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\WebApplication8.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\WebApplication8.xml" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\contact.html" />
+    <Content Include="obj\Release\Package\PackageTmp\css\style-reset.css" />
+    <Content Include="obj\Release\Package\PackageTmp\css\style.css" />
+    <Content Include="obj\Release\Package\PackageTmp\css\style2.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Dentists.html" />
+    <Content Include="obj\Release\Package\PackageTmp\HomePage_Ashwin.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\images\arrow.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\images\dark_gradient.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\Haider.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\logo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\images\Matt.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\mays.PNG" />
+    <Content Include="obj\Release\Package\PackageTmp\images\page_bottom.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\page_tile.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\page_top.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\seperator.png" />
+    <Content Include="obj\Release\Package\PackageTmp\images\seperator_black.png" />
+    <Content Include="obj\Release\Package\PackageTmp\images\seperator_red.png" />
+    <Content Include="obj\Release\Package\PackageTmp\images\Sid.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\signupimage.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\slide.png" />
+    <Content Include="obj\Release\Package\PackageTmp\images\slide1.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\slide2.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\slide3.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\slide4.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\thumb1.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\top.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\top_black.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\top_red.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\images\Vikram.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\index.html" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_closebox.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_left.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_progress.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_right.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_shadow_e.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_shadow_n.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_shadow_ne.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_shadow_nw.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_shadow_s.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_shadow_se.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_shadow_sw.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_shadow_w.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_title_left.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_title_main.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\fancy_title_right.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\jquery-1.3.2.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\jquery.easing.1.3.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\jquery.fancybox-1.2.1.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\jquery.fancybox-1.2.1.pack.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fancybox\jquery.fancybox.css" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fullcalendar.css" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fullcalendar.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fullcalendar.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\fullcalendar.print.css" />
+    <Content Include="obj\Release\Package\PackageTmp\js\gcal.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\input\input_left-focus.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\input\input_left-hover.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\input\input_left.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\input\input_right-focus.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\input\input_right-hover.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\input\input_right.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\input\input_text_left.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\input\input_text_right.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea-mm-focus.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea-mm-hover.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea-mm.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea_bl.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea_bm.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea_br.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea_ml.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea_mr.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea_tl.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea_tm.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\img\textarea\textarea_tr.gif" />
+    <Content Include="obj\Release\Package\PackageTmp\js\jqtransform.css" />
+    <Content Include="obj\Release\Package\PackageTmp\js\jquery-ui.custom.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\jquery.cycle.all.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\jquery.jqtransform.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\jquery.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\legacy.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\picker.date.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\picker.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\picker.time.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Patientinformation.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\photos\1.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\photos\tb_1.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\Services.html" />
+    <Content Include="obj\Release\Package\PackageTmp\SignUp.aspx" />
+    <Content Include="obj\Release\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="obj\Release\WebApplication8.dll" />
+    <Content Include="obj\Release\WebApplication8.pdb" />
+    <Content Include="obj\Release\WebApplication8.xml" />
+    <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
+    <Content Include="Patientinformation.aspx" />
+    <Content Include="photos\1.jpg" />
+    <Content Include="photos\tb_1.jpg" />
+    <Content Include="Services.html" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appointment.aspx.designer.vb">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.aspx.vb">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlobalClass.vb" />
+    <Compile Include="DatabaseLayer.vb" />
+    <Compile Include="HomePage_Ashwin.aspx.designer.vb">
+      <DependentUpon>HomePage_Ashwin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage_Ashwin.aspx.vb">
+      <DependentUpon>HomePage_Ashwin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Patientinformation.aspx.designer.vb">
+      <DependentUpon>Patientinformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patientinformation.aspx.vb">
+      <DependentUpon>Patientinformation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.vb">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.vb">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\WebApplication8.dll.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\dtcdentalcolorado - FTP.pubxml" />
+    <None Include="My Project\PublishProfiles\dtcdentalcolorado - Web Deploy.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="packages.config" />
+    <Content Include="obj\debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\debug\DTCDental_Integrated_V1_0.vbproj.GenerateResource.Cache" />
+    <Content Include="obj\debug\DTCDental_Integrated_V1_0.vbprojResolveAssemblyReference.cache" />
+    <Content Include="obj\debug\WebApplication8.vbproj.GenerateResource.Cache" />
+    <Content Include="obj\debug\WebApplication8.vbprojResolveAssemblyReference.cache" />
+    <None Include="obj\debug\__TestProfilesForFilePreview__\dtcdentalcolorado - Web Deploy.pubxml" />
+    <Content Include="obj\Release\CSAutoParameterize\original\Web.config" />
+    <Content Include="obj\Release\CSAutoParameterize\transformed\Web.config" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\DTCDental_Integrated_V1_0.vbproj.GenerateResource.Cache" />
+    <Content Include="obj\Release\DTCDental_Integrated_V1_0.vbprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\Package\PackageTmp\packages.config" />
+    <Content Include="obj\Release\Package\PackageTmp\Web.config" />
+    <Content Include="obj\Release\TransformWebConfig\assist\Web.config" />
+    <Content Include="obj\Release\TransformWebConfig\original\Web.config" />
+    <Content Include="obj\Release\TransformWebConfig\transformed\Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\debug\__testMsDeployConnection__\" />
+    <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64591</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

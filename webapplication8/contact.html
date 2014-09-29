@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DTC Dental | Contact</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="style1" />
+    <!-- Set viewport for mobile devices -->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+    <!-- JQuery / Javascript Scripts-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript"> /* MOBILE COLLAPSE MENU */
+            (function ($) {
+                $.fn.collapsable = function (options) {
+                    // iterate and reformat each matched element
+                    return this.each(function () {
+                        // cache this:
+                        var obj = $(this);
+                        var tree = obj.next('.navigation');
+                        obj.click(function () {
+                            if (obj.is(':visible')) { tree.toggle(); }
+                        });
+                        $(window).resize(function () {
+                            if ($(window).width() <= 570) { tree.attr('style', ''); };
+                        });
+                    });
+                };
+            })(jQuery);</script>
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            $(".slide-trigger").collapsable(); // trigger for mobile navigation
+            $('form').jqTransform({
+                imgPath: 'js/img/'
+            });
+        });
+    </script>
+    <!-- End Javascript -->
+</head>
+    <!-- End Head -->
+<body>
+   <div id="container"> <!-- Page Container -->
+       <div id="page_wrap">
+        <div id="header">
+            <div id="logo"><a href="index.html">
+                <img src="images/untitled.jpg" class="logo_image" alt="" /></a></div>
+        </div>
+        
+        <div id="h_navcontainer"> <!-- Header Container -->
+            <nav class="group">
+                <h2 class="navheader slide-trigger">&#8801 Menu<span></span></h2> <!-- Mobile Navigation Title -->
+                <ul class="navigation group">
+                    <li><a href="index.html" class="sel" id="navbtn">Home</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Dentists.html">Dentists</a></li>
+                    <li><a href="SignUp.aspx">Sign In</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </nav>
+            <h2 class="navheader collapse-trigger"><span></span></h2> <!-- Mobile Header Navigation Trigger -->
+            <br />
+            <br />
+        </div>
+        <!-- close h_navcontainer -->
+        <!-- open contact_info div -->
+            <div>
+                <h1 class="pagetitle">Contact Information</h1>
+                <div id="contact_info">
+                  <h2 style="margin-right: 20%;">Where to Find Us</h2>
+                    <ul>
+                        <li>123 Dental Way</li>
+                        <li>Englewood, Colorado</li>
+                        <li>Tel. 999-999-999</li>
+                        <li><a href="contactus@dtcdental.org">Email: contactus@dtcdental.org</a></li>
+                    </ul>
+                    <iframe id="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49153.451030748416!2d-104.99719044999999!3d39.6476735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c807a9da33fb7%3A0x6620ef5f5fcfffc5!2sEnglewood%2C+CO!5e0!3m2!1sen!2sus!4v1397960541346" frameborder="0"></iframe>
+                    &nbsp;<br />
+                </div>
+             </div>
+        <!-- close contact_info div -->
+        <!-- open form container -->
+            <!--  <div id="form_container_contact_us">
+                    <form action="" method="post" onsubmit="this.submit(); this.reset(); return false;"> <!-- Form actions --> <!--
+                        <div>
+                            <h2>Contact Us</h2>
+                        </div>
+                        <div>
+                            <label for="roundtextbox_contact_us" class="labelClass_contact_us">Name:</label>
+                            <input name= "name"; placeholder="First and Last Name"class="roundtextbox_contact_us" type="text" />
+                        </div>
+                        <div>
+                            <label for="roundtextbox_contact_us" class="labelClass_contact_us">Telephone:</label>
+                            <input name= "telephone"; pattern="\d{3}[\-]\d{3}[\-]\d{4}"  placeholder="###-###-####" class="roundtextbox_contact_us" type="tel" />
+                        </div>
+                        <div>
+                            <label for="roundtextbox_contact_us" class="labelClass_contact_us">E-mail:</label>
+                            <input name= "email"; placeholder="E-mail Address" class="roundtextbox_contact_us" type="email" />
+                        </div>
+                        <div>
+                            <label for="Message" class="labelClass_contact_us">Message:</label>
+                            <textarea name= "message"; class="textarea_contact_us" placeholder="Enter your message here." cols="37" rows="8" name="mytext"></textarea>
+                        </div>
+                        <div>
+                            <label class="labelClass"></label>
+                            <input class="styled-button_contact_us" type="submit" value="Submit" />
+                        </div>
+                    </form>
+                </div> -->
+                <!-- close form_container -->
+                <div style="clear: both"></div>
+            </div>
+                   <!-- close page -->
+         </div>
+        <!-- close page_wrap -->   
+</body>
+</html>

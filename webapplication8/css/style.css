@@ -1,0 +1,1637 @@
+﻿@charset "utf-8";
+@import url('style-reset.css');
+
+/*------------------------------------------------------------------------------------------*/
+/*-------   Generic HTML Used on Multiple Pages to define Page Structure  -----------------*/
+/*----------------------------------------------------------------------------------------*/
+
+/*Defines details that apply to all pages*/
+body {
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif; /*Default font for all pages*/
+	background: #f2f2f2 url(../images/top.jpg) repeat-x; /*Header Image and background color*/
+}
+
+#container { /*Defines main body*/
+	margin: auto; /*centers main content area*/
+	width: 70%; /*Width of main content area*/
+	font-size: .875em; /*Sets font size in main content area*/
+}
+
+#header {
+	height: 110px; /*Defines the height of the header*/
+}
+
+#logo {
+	width: 62.5%; /*ID for the div used to contain image*/
+	height: 105px; /*Set height of div to contain logo image*/
+}
+
+.logo_image { /*Class for Logo Image*/
+	width: 100%; /*600 / 960 */ 
+	height: 100%;
+}
+
+#screen { /*Class used for Div for Javascript Slider*/
+	width: 100%; /*80%*/
+	height: 250px;
+	border: 1px solid #d6dde2;
+	background: #fff;
+	margin: 1% 0 5%;
+	padding: 2.5% 0 0;
+	-moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+}
+
+#left { /*Defines the left column on the Index, Services, and Dentists Pages*/
+	float: left;
+	width: 31.25%;
+}
+
+/*Matt*/
+#left_dentist { /*Defines the left column for the second row of Dentists Pages*/
+	float: left;
+	width: 31.25%;
+	clear: both;
+}
+
+#right { /*Defines the right column on the Index, Services, and Dentists Pages*/
+	float: right;
+	width: 31.25%;
+}
+
+#right_dentist { /*Defines the right column for the second row of Dentists Pages*/
+	float: right;
+	width: 31.25%;
+}
+
+#middle {  /*Defines the middle column on the Index, Services, and Dentists Pages*/
+	margin-left: 34.375%; /*Extra 3% of margin is for space between columns*/
+	margin-right: 34.375%;
+}
+
+#middle_dentist { /*Defines the middle column for the second row of Dentists Pages*/
+	margin-left: 34.375%; /*Extra 3% of margin is for space between columns*/
+	margin-right: 34.375%;
+}
+
+#left, #right, #middle { /*Defines horizontal spacing between columns on the Index, Services, and Dentists Pages*/
+	margin-bottom: 40px;
+}
+
+/* Matt
+#footer {position: absolute; bottom: 0; width: 100%; height:60px; background: url(../images/top.jpg) repeat-x;}
+
+
+#footer {
+	clear: both;
+	width: 900px;
+	margin: auto;
+	font-size: .8em;
+	height: 160px;
+	padding: 30px;
+	background: url(../images/seperator.png) repeat-x;
+}
+/* Matt Footer Nav
+#f_navcontainer {
+	width: 960px;
+	height: 60px;
+	position: relative;
+	left: 51.25%;
+}
+
+	#f_navcontainer ul {
+		color: White;
+		width: 100%;
+	}
+
+		#f_navcontainer ul li {
+			display: inline;
+			float: none;
+			font-size: .8em;
+		}
+
+			#f_navcontainer ul li a {
+				padding: 0.2em 1em;
+				color: #fff;
+				text-decoration: none;
+				float: left;
+				letter-spacing: .14em;
+			}
+
+				#f_navcontainer ul li a:hover {
+					color: #FFC;
+				}
+/*Matt Footer Nav*/
+
+/* pages */
+
+#page_wrap { /*Defines the header region.*/
+	width: 100%;
+	margin: auto;
+}
+
+#page_top { /*NOT USED*/
+	height: 54px;
+	background: url(../images/page_top.jpg) no-repeat;
+}
+
+#page { /*NOT USED*/
+	background: url(../images/page_tile.jpg) repeat-y;
+	padding: 0 54px;
+}
+
+#page_bottom { /*NOT USED*/
+	height: 54px;
+	background: url(../images/page_bottom.jpg) no-repeat;
+	margin-bottom: 40px;
+}
+
+/*-----------------------------------------------*/
+/*-------   Contact.html Page  -----------------*/
+/*---------------------------------------------*/
+
+/*Matt*/
+#google_maps { /*Class to Style Google Map for Location of Clinic*/
+	width: 96.5%; /*434.25 / 450*/
+	height: 300px; /*400 / 450 53.7634409%*/
+	float: none; /*Center map in div*/
+	margin: auto; /*Center map in div*/
+	border: 0;
+}
+
+/*Matt*/
+#contact_info { /*Creates Left Column for Contact Page */
+	float: none; /*Places Column on left of Div*/
+	width: 70%;
+    margin: auto;
+	margin-top: 30px; /*Fixed Top Margin to allow for adaquate space on every viewport*/
+	border: 1px solid #CCC;
+	padding: 1.5625% 0px 1.25em 1.5625%; /*Top, Right, Bottom, Left*/
+	background: #fafafa; /*Background Color*/
+	margin-bottom: 3%;
+	-moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+}
+	/* 450px / 960px 46.875*/
+
+	#contact_info ul { /*Style for Address*/
+		margin: 20px;
+	}
+
+		#contact_info ul li { /*Style for Address*/
+			background: url(../images/arrow.gif) no-repeat center left;
+			padding-left: 15px;
+			font-size: .9em;
+			line-height: 1.8em;
+		}
+
+/*------------------------------------------------*/
+/*-------   Services.html Page  -----------------*/
+/*----------------------------------------------*/
+/* Matt*/
+#serviceimage { /*Class for the Three Images on the Service and Dentist Page*/
+	float: none;
+	max-width: 100%;
+}
+/* Service Image Div*/
+.dentist { 
+	clear: both;
+	float: none;
+	max-width: 100%;
+}
+/* Matt*/
+
+/*-----------------------------------------------*/
+/*-------   TYPOGRAPHY, IMG and LISTS   --------*/
+/*---------------------------------------------*/
+
+a {
+	color: #FF4E00;
+}
+	/* Matt*/
+	a.index { /*Used to get rid of underline from Index Accouncement Column*/
+		text-decoration: none; /* Remove underline from index Announcements*/
+	}
+/* Matt*/
+p { /*Style all paragraphs*/
+	padding: 15px 0;
+	line-height: 1.6em;
+	font-size: .9em;
+	color: #666;
+}
+
+	p.frontpage_text { /*Align Text within columns on Dentist and Index pages.*/
+		text-align: left;
+	}
+
+h2.list_heading { /*Heading Style for Announcements on Index Page*/
+	font-size: 1em;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 3px;
+}
+
+.list_text { /*List Text Style for Announcements on Index Page*/
+	font-size: .8em;
+	line-height: normal;
+	padding: 0px;
+	padding-bottom: .2em;
+}
+/*Matt*/
+h3.frontpage_heading { /*Heading for Index Columns*/
+	background: url(../images/seperator.png) repeat-x bottom; /*Underline Image*/
+	padding-bottom: 8px;
+	font-size: 1.8em;
+	font-weight: normal;
+	letter-spacing: normal;
+	color: #333; 
+	margin-bottom: 15px;
+}
+
+
+/*Matt*/
+/*Matt*/
+h1.pagetitle { /* Title Styling for Contact, Services, and Dentists Pages*/
+	font-size: 1.8em;
+	background: url(../images/seperator.png) repeat-x bottom;
+	padding-bottom: 8px;
+	font-weight: normal;
+	letter-spacing: normal;
+	color: #333;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+
+h3.servicepage_header /* Defines Style for Column Titles on Services and Dentists Pages */ {
+	background: url(../images/seperator.png) repeat-x bottom;
+	padding-bottom: 8px;
+	font-size: 1.8em;
+	font-weight: normal;
+	letter-spacing: normal;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+p.servicepage_text /* All text on service page lists */ {
+	text-align: justify;
+	font-size: 1.2em;
+	font-weight: normal;
+	letter-spacing: normal;
+	text-align: left;
+	background: url(../images/seperator.png) repeat-x bottom;
+	padding: 10px;
+}
+
+img.servicepage_image4 /* Align First Two Images on Service Page on One Row */ {
+	display: none;
+}
+
+img.servicepage_image /* Align First Two Images on Service Page on One Row */ {
+	width: 31.25%; /*300 px / 960 px*/
+	float: left;
+	margin-right: 3.125%; /* 20px / 960px*/
+	margin-bottom: 15px;
+}
+
+img.servicepage_image1 /* Align First Two Images on Service Page on One Row */ {
+	width: 31.25%; /*300 px / 960 px*/
+	float: left;
+	margin-right: 3.125%; /* 20px / 960px*/
+	margin-bottom: 15px;
+}
+
+
+img.servicepage_image2 /* Align Third Image on Service Page on One Row */ {
+	width: 31.25%; /*300 px / 960 px*/
+	float: left;
+	margin-right: 0%;
+	margin-bottom: 15px;
+}
+
+/* Matt
+*/
+
+.float_left { /*NOT USED*/
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 8px;
+	background: #F7F7F7;
+	border: 1px solid #CCC;
+	-moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+}
+
+/**************************** Gallery *****************************/
+/*
+#gallery {
+	width: 852px;
+	margin: auto;
+	overflow: auto;
+	padding-bottom: 18px;
+	position: static;
+}
+
+.float_left_thumb {
+	float: left;
+	height: 164px;
+	width: 152px;
+	margin: 8px 10px 2px 8px;
+	background: url(../images/gallery_thumb.png) no-repeat;
+	padding-top: 6px;
+	text-align: center;
+}
+
+.center {
+	margin: auto;
+}
+
+#no_gallery_found {
+	width: 798px;
+	padding: 50px;
+	margin: auto;
+	background: red;
+	border: 10px solid white;
+}
+*/
+
+/*-----------------------------------------------*/
+/*---------------   NAVIGATION   ---------------*/
+/*---------------------------------------------*/
+/*Ashwin new navigation*/
+
+.navigation { 
+	max-width: none;
+	background: #3D3939;
+	padding: 0;
+}
+
+	.navigation li {
+		float: left;
+	}
+
+		.navigation li a {
+			display: block;
+			color: #fff;
+			padding: 10px;
+		}
+
+			.navigation li a:hover {
+				background: #ECEDD8;
+				color: black;
+			}
+
+.navheader {
+	font-size: 12px;
+}
+
+.slide-trigger {
+	display: none; /* need this */
+	border: 1px solid #CCCCCC;
+	cursor: pointer;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+	.slide-trigger span { /*Menu Span for Mobile Navigation*/
+		background-position: 0 -24px;
+		display: block;
+		float: right;
+		margin-top: 3px;
+		height: 14px;
+		width: 32px;
+	}
+
+h2.navheader.slide-trigger { /*Menu Heading for Mobile Navigation*/
+	margin-top: 15px;
+	font-size: 18px;
+	color: white;
+	border: none;
+}
+/* gallery menu ---------------*/
+/*
+#g_navcontainer {
+    clear: both;
+    margin-bottom: 40px;
+    width: 100%;
+    background: #ebebeb url(../images/gallery-nav.png) repeat-x;
+    height: 73px;
+}
+
+    #g_navcontainer ul {
+        color: #999;
+        width: 100%;
+        padding: 30px;
+    }
+
+        #g_navcontainer ul li {
+            display: inline;
+        }
+
+            #g_navcontainer ul li a {
+                padding: 0.2em 1em;
+                color: #666;
+                text-decoration: none;
+                letter-spacing: .14em;
+            }
+
+                #g_navcontainer ul li a:hover {
+                    background: #FFC;
+                    color: #000;
+                }
+    */
+/* horizontal menu ---------------*/
+
+#h_navcontainer { /* Navigation Div Container*/
+	width: 100%;
+	height: auto;
+}
+/*
+    #h_navcontainer ul {
+        color: White;
+        width: 100%;
+    }
+
+        #h_navcontainer ul li {
+            display: inline;
+        }
+
+            #h_navcontainer ul li a {
+                padding: 0.2em 1em;
+                color: #fff;
+                text-decoration: none;
+                float: left;
+                letter-spacing: .14em;
+            }
+
+                #h_navcontainer ul li a:hover {
+                    color: #FFC;
+                }
+
+*/
+/* hover divs (pane list) */
+
+.pane-list { /*Pane List for Announcement Column on Index Page*/
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+	.pane-list li { /*Style Announcement Pane List*/
+		background: url(../images/hover-list.png) repeat-x;
+		cursor: pointer;
+		min-height: 50px;
+		height: 5em;
+		padding: 4px;
+		margin-bottom: 1px;
+		word-wrap:break-word;
+	}
+
+		.pane-list li:hover { /*Change Color for Announcement Index Hover*/
+			background: #f6ffe9;
+		}
+
+	.pane-list img { /*Style Announcement Pane List Image*/
+		border: 2px solid white;
+		float: left;
+		margin-right: 8px;
+	}
+
+	.pane-list a { /*Style Announcement Pane List*/
+		color: #333;
+	}
+
+/* footer menu ---------------*/
+/* NOT USED
+#footer h4 {
+	font-weight: bold;
+	margin-bottom: 8px;
+	padding: 5px;
+	background: #dfdfdf;
+	color: #666;
+	-moz-border-radius-topleft: 5px;
+	-khtml-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-khtml-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+
+#footer_left {
+	float: left;
+	width: 540px;
+	border: 0px solid red;
+}
+
+	#footer_left ul {
+		float: left;
+		margin-right: 60px;
+		width: 120px;
+	}
+
+	#footer_left li {
+		background: url(../images/seperator.png) repeat-x bottom;
+		padding: 5px 0;
+	}
+
+	#footer_left ul li a {
+		color: #999;
+		text-decoration: none;
+	}
+
+#footer_right {
+	width: 350px;
+	float: right;
+}
+
+	#footer_right ul li {
+		display: inline;
+		margin-right: 15px;
+	}
+*/
+
+/*-----------------------------------------------*/
+/*---------------      FORMS     ---------------*/
+/*---------------------------------------------*/
+
+#form_container { /* Generic Container for all Forms */
+	border: 1px solid #CCC;
+	width: 41.66666666667%; /*400/960*/
+	margin-top: 30px;
+	padding: 1.5625% 20px 1.5625%;
+	background: #fafafa;
+	float: right;
+	margin-left: 2%;
+    margin-right: 10%;
+	-moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	/*Matt*/
+	border-radius: 8px;
+}
+/*Matt*/
+#form_container_contact_us { /* Container Contact Us Form*/
+	border: 1px solid #CCC;
+	width: 41.66666666667%; /*400 /960*/
+	margin-top: 30px;
+	background: #fafafa; /*Background Color*/
+	float: right;
+	padding: 1.5625% 20px 1.5625%;
+	margin-left: 20px; /*20px / 960px*/
+	-moz-border-radius-topleft: 8px; /*Border radius for all browser types*/
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	/*Matt*/
+	border-radius: 8px;
+}
+
+.roundtextbox_contact_us { /*Contact Us Textbox*/
+	border: 1px solid #c4c4c4;
+	height: 25px;
+	width: 68.75%; /*275 / 400*/ /*Responsive Width*/
+	margin-bottom: 10px;
+	font-size: 13px;
+	padding: 4px 4px 4px 4px;
+	border-radius: 4px;
+	float: right;
+	-moz-border-radius: 4px; /*Border Radius for different browsers*/
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 8px #d9d9d9;
+	-moz-box-shadow: 0px 0px 8px #d9d9d9;
+	-webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+
+	.roundtextbox_contact_us:focus, .textarea_contact_us:focus { /*Focus for Textbox*/
+		outline: none;
+		border: 1px solid #7bc1f7;
+		box-shadow: 0px 0px 8px #7bc1f7;
+		-moz-box-shadow: 0px 0px 8px #7bc1f7;
+		-webkit-box-shadow: 0px 0px 8px #7bc1f7;
+	}
+
+.textarea_contact_us { /*Style Text Area for Message in Contact Us*/
+	border: 1px solid #c4c4c4;
+	width: 68.75%; /*275 / 400*/
+	margin-bottom: 10px;
+	font-size: 13px;
+	padding: 4px 4px 4px 4px;
+	border-radius: 4px;
+	float: right;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 8px #d9d9d9;
+	-moz-box-shadow: 0px 0px 8px #d9d9d9;
+	-webkit-box-shadow: 0px 0px 8px #d9d9d9;
+	resize: none; /*Disallow resize to make text area responsive*/
+}
+
+.styled-button_contact_us { /*Button for Contact Us Form Submission*/
+	-webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow: rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow: rgba(0,0,0,0.2) 0 1px 0 0;
+	border-bottom-color: #333;
+	border: 1px solid #61c4ea;
+	background-color: #7cceee;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #333;
+	font-family: 'Verdana',Arial,sans-serif;
+	font-size: 14px;
+	text-shadow: #b2e2f5 0 1px 0;
+	padding: 5px;
+	float: right;
+	clear: both;
+}
+
+.contact_us_div {
+	vertical-align: middle;
+}
+
+.labelClass_contact_us { /*Style Labels*/
+	text-align: justify;
+	font-size: 1.2em;
+	font-weight: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #666;
+	height: 25px;
+	margin-bottom: 10px;
+	float: left;
+	padding: 4px 4px 4px 4px;
+}
+/*Matt*/
+/************************************************************/
+/************** Begin Edit ---> Sid    *********************/
+/************************************************************/
+
+#form_container_signUp {border: 1px solid #CCC; width: 26.4166666666666666666%; margin-top: 2.2em; padding: 1.25em 1.25em 1.25em; background: #fafafa; float: left;  margin-left: 9%;   /*250 / 960*/
+    -moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+}
+
+#form_container_patientinfo {border: 1px solid #CCC; width: 820px; margin-top: 30px; padding: 20px 20px 20px; background: #fafafa; float: left; margin-left: 20px;
+    -moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+}
+
+
+#form_container_left {border: 1px solid #CCC; width: 30%; margin-top: 1.875em; padding: 1.25em 1.25em 1.25em; background: #fafafa; float: none; margin-left: 35%; margin-right: 35% ; /*400 / 960*/
+    -moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+    height: 20.625em;
+	margin-bottom: 2%;
+}
+
+
+#form_container_signup2 {border: 1px solid #CCC; width: 41.66666667%; margin-top: 2.2em; padding: 1.25em 1.25em 1.25em; background: #fafafa; float: right; margin-right: 9%; /*500/960*/
+    -moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	margin-bottom: 2%;
+}
+
+.margingleft20 {
+    margin-left:40px;
+}
+.marginright20 {
+   margin-right:20px;
+}
+
+.marginright20per {
+   margin-right:5%;
+}
+.marginright120 {
+   margin-right:120px;
+}
+.labelClass { 
+    text-align: justify; 
+    font-size: 1.2em; 
+    font-weight: normal; 
+    letter-spacing: normal; 
+    text-align: left; 
+    color:#666;
+    margin-top: 3%;
+
+
+}
+
+.labelClass_middle { 
+    text-align: justify; 
+    font-size: 1.2em; 
+    font-weight: normal; 
+    letter-spacing: normal; 
+    text-align: center; 
+    color:#666;
+    margin-top: 1%;
+
+}
+  .roundtextbox { 
+    border: 1px solid #c4c4c4; 
+    height: 25px; 
+    max-width: 88%; /*275 --> 220/250*/
+    font-size: 13px; 
+    padding: 4px 4px 4px 4px; 
+    border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
+} 
+ 
+.roundtextbox:focus { 
+    outline: none; 
+    border: 1px solid #7bc1f7; 
+    box-shadow: 0px 0px 8px #7bc1f7; 
+    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
+} 
+
+.roundtextbox_appointment { 
+    border: 1px solid #c4c4c4; 
+    height: 25px; 
+    max-width: 88%; /*275 --> 220/250*/
+    font-size: 13px; 
+    padding: 4px 4px 4px 4px; 
+    border-radius: 4px; 
+	margin-left: 6px;
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
+} 
+ 
+.roundtextbox_appointment:focus { 
+    outline: none; 
+    border: 1px solid #7bc1f7; 
+    box-shadow: 0px 0px 8px #7bc1f7; 
+    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
+} 
+
+.roundtextbox_signup { 
+    border: 1px solid #c4c4c4; 
+    height: 25px; 
+    width: 60%; /*275 --> 220/250*/
+    font-size: 13px; 
+    padding: 4px 4px 4px 4px; 
+    border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
+} 
+ 
+.labelClass_signup { 
+    text-align: justify; 
+    font-size: 1.2em; 
+    font-weight: normal; 
+    letter-spacing: normal; 
+    text-align: left; 
+    color:#666;
+    margin-top: 3%;
+	
+}
+.roundtextbox_signup:focus { 
+    outline: none; 
+    border: 1px solid #7bc1f7; 
+    box-shadow: 0px 0px 8px #7bc1f7; 
+    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
+} 
+#borderedDiv
+{
+ border: 1px solid #CCC; width: 800px; margin-top: 30px; padding: 20px 20px 20px; background: #fafafa; float: left; margin-left: 20px;
+    -moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+}
+
+.borderdiv {
+width: 420px; margin-top: 30px;background: #fafafa; float: left; margin-left: 20px;
+    -moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+
+}
+
+.borderdiv_border {
+border:solid #7cceee thin; width: 400px;background: #fafafa;padding: 5px 5px 5px; 
+    -moz-border-radius-topleft: 8px;
+	-khtml-border-radius-topleft: 8px;
+	-webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+	-khtml-border-radius-topright: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-khtml-border-radius-bottomright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-khtml-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+
+}
+.width800 {
+width:83.333333333333333%; /*800/960*/
+}
+
+.floatleft {
+float:left;
+}
+.styled-button {
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	border-bottom-color:#333;
+	border:1px solid #61c4ea;
+	background-color:#7cceee;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	color:#333;
+	font-family:'Verdana',Arial,sans-serif;
+	font-size:14px;
+	text-shadow:#b2e2f5 0 1px 0;
+	padding:5px;
+   margin-left: 37.5%;
+   margin-right: 37.5%;
+    width: 25%;
+}
+
+.styled-button_margin {
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	border-bottom-color:#333;
+	border:1px solid #61c4ea;
+	background-color:#7cceee;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	color:#333;
+	font-family:'Verdana',Arial,sans-serif;
+	font-size:14px;
+	text-shadow:#b2e2f5 0 1px 0;
+	padding:5px;
+    margin-left:75%; /*300/400 */
+    width: 40%;
+    margin-left: 30%;
+	margin-right: 30%;
+	
+}
+
+.styled-button_signUp {
+	-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	border-bottom-color:#333;
+	border:1px solid #61c4ea;
+	background-color:#7cceee;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	color:#333;
+	font-family:'Verdana',Arial,sans-serif;
+	font-size:14px;
+    margin-left:75%; /*300/400 */
+	text-shadow:#b2e2f5 0 1px 0;
+	padding:5px;
+    width: 40%;
+    float: none;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+h1#mainTitle, #contentTitle h1 {
+    color: #4A83B4;
+    display: inline;
+    font-family: arial,helvetica;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 10px;
+    width: auto;
+}
+
+h2, #contentArea h2.title {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #005195;
+    font-family: arial,helvetica;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0 0 0.83em;
+    text-indent: 0;
+    width: 100%;
+}
+
+#sign_up_title {
+	background: url(../images/seperator.png) repeat-x bottom;
+    
+    color: #005195;
+    font-family: arial,helvetica;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0 0 0.83em;
+    text-indent: 0;
+    width: 100%;
+    clear: both;
+    text-align: center;
+}
+
+img.servicepage_image3 /* Align Third Image on Service Page on One Row */
+{
+	max-width: 70%; /*350 / 500*/
+    height:200px; 
+    margin-left: auto;
+    margin-right: auto; 
+    display: block; 
+}
+
+.validateappointment {
+margin-left:25%;
+
+}
+
+/************************************************************/
+/************** End Edit ---> Sid    *********************/
+/************************************************************/
+
+
+
+/*-----------------------------------------------*/
+/*---------------      Slider     --------------*/
+/*---------------------------------------------*/
+#slideshow { /*Div for Slideshow for FrontPage Encompasses JavaScript */
+	background-color: #fff6df;
+	width: 92.7083333333%; /* 890/960*/
+	min-height: 220px;
+	margin: .313em 0px 0px 2em;
+	float: left;
+}
+/*NOT USED*/
+#slideshow-threed {
+	width: 920px;
+	height: 283px;
+	margin: 15px 0px 0px 0px;
+	float: left;
+}
+
+#box-nav-slider { /*Div that Contains Slider Navigation on Index Page */
+	width: 97.3958333%; /*/935 / 960 */
+	height: 1.063em;
+	float: left;
+}
+
+#slideshow-navigation a { /* Style Slideshow Navigation Hyperlink*/
+	background: url(../images/slide.png) no-repeat scroll 50% 50%;
+	display: block;
+	float: left;
+	font-size: 0px;
+	width: 9px;
+	height: 9px;
+	margin: 10px 0 0;
+	outline-style: none;
+	outline-width: medium;
+	padding: 2px;
+}
+
+#slideshow-navigation { /* Position Slideshow Navigation*/
+	float: right;
+	padding-right: 10px;
+}
+
+	#slideshow-navigation .activeSlide { /* Style Slideshow Navigation slide*/
+		background: url(../images/slide.png) no-repeat scroll 0% 50%;
+	}
+
+.slidehalf { /*Style Slideshow Column for Image*/
+	margin-top: .66em;
+	margin-right: 1.1em;
+	float: left;
+	max-width: 44.9438202%; /*400/890*/
+	max-height: 200px;
+	overflow: hidden;
+}
+/* Editable Slider Image Position NOT USED*/ 
+.slidehalf2 {
+	margin-top: 0px;
+	margin-right: 0px;
+	float: left;
+	max-width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+}
+/* Editable Slider Image Position */
+.slide-text h1 { /*Style Header for Slideshow Text*/
+	color: #666;
+	padding: .875em 1.25em 0px 0px;
+}
+
+.slide-text p { /*Style Paragraph for Slideshow Text*/
+	font-size: 1em;
+	color: #666;
+	line-height: 1.571em;
+	padding-right: 1.1em;
+	text-align: left;
+	
+
+}
+/*NOT USED*/
+.flash-img {
+	text-align: center;
+	display: block;
+	margin: 100px auto 0 auto;
+}
+/*NOT USED*/
+a.read_more {
+	color: #ff4e00;
+	font-size: 12px;
+	float: right;
+	margin-right: 20px;
+}
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) { /*Media Query for Tablets and Small Desktop Devices*/
+
+	#container { /*Shrink Container (Main Content Area)*/
+		width: 90%;
+		height: 100%;
+		position: relative;
+	}
+
+	#page_wrap { /*Responsive Page Wrap*/ /*Defines the header region.*/
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	#logo { /*Shrink Logo Div Area*/
+		width: 75%;
+		height: 105px;
+	}
+
+	#serviceimage { /*Shrink Service Image Margins and Enlarge Image on Services and Dentist Pages*/
+		margin-left: 20%;
+		margin-right: 20%;
+		width: 60%;
+	}
+
+	img.servicepage_image2 /* Align First Two Images on Service Page on One Row */ {
+		width: 31.25%; /*300 px / 960 px*/
+		float: left;
+		margin-right: 0%;
+	}
+
+	img.servicepage_image /* Align First Two Images on Service Page on One Row */ {
+		width: 31.25%; /*300 px / 960 px*/
+		float: left;
+		margin-right: 3.125%; /* 20px / 960px*/
+	}
+
+	.list_text { /* Increase Font Size for Announcement List Text*/
+		font-size: 1em;
+	}
+
+	p.frontpage_text { /*Increase Text Size for Services and Insurance Info Column*/
+		font-size: 1em;
+	}
+    
+    #form_container_left { /*Increase Height for Validations*/
+    height: 20.5em;
+	
+}
+	.roundtextbox_signup { 
+    width: 90%;
+	margin-left: 5%;
+	margin-right:5%;
+} 
+}
+
+
+@media only screen and (max-width: 768px) { /*Media Query for Tablets*/
+
+	/*Ashwin new navigation*/
+	.slide-trigger {
+		display: block;
+	}
+
+	.no-js .slide-trigger { /*Get rid of Javascript Slider*/
+		display: none;
+	}
+
+	.navigation { /*Get rid of Javascript Slider*/
+		display: none;
+	}
+
+	.no-js .navigation { /*Get rid of Javascript Slider*/
+		display: block;
+	}
+
+	.navigation { /*Responsive Navigation*/
+		margin: 0 15px;
+	}
+
+		.navigation li { /*Responsive Navigation*/
+			float: none;
+		}
+
+			.navigation li a { /*Responsive Navigation*/
+				border-bottom: 1px solid #fff;
+			}
+
+	#container { /*Shrink Container (Main Content Area)*/
+		width: 90%;
+		height: 100%;
+		position: relative;
+	}
+
+	#page_wrap { /*Responsive Page Wrap*/ /*Defines the header region.*/
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	#logo { /*Shrink Logo Div Area*/
+		width: 100%;
+		height: 105px;
+	}
+
+	#serviceimage { /*Shrink Service Image Margins and Enlarge Image on Services and Dentist Pages*/
+		margin-left: 20%;
+		margin-right: 20%;
+		width: 60%;
+	}
+
+	img.servicepage_image2 /* Align First Two Images on Service Page on One Row */ {
+		width: 31.25%; /*300 px / 960 px*/
+		float: left;
+		margin-right: 0%;
+	}
+
+	img.servicepage_image /* Align First Two Images on Service Page on One Row */ {
+		width: 31.25%; /*300 px / 960 px*/
+		float: left;
+		margin-right: 3.125%; /* 20px / 960px*/
+	}
+
+	#contact_info { /*Shrink Contact Info Div*/
+		float: none;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-top: 15px;
+		margin-bottom: 1%;
+		padding-bottom: .875em;
+	}
+
+	#form_container_contact_us { /*Shrink Contact Info Container Margins and Area*/
+		float: none;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-top: 3%;
+		padding-bottom: 145px;
+		margin-bottom: 8%;
+	}
+
+	.roundtextbox_contact_us { /*Shrink Contact Info Textbox Size*/
+		border: 1px solid #c4c4c4;
+		height: 25px;
+		width: 50%; /*275 / 400*/
+		margin-bottom: 5px;
+		display: block;
+	}
+
+
+	.textarea_contact_us { /*Shrink Contact Info TextArea size*/
+		border: 1px solid #c4c4c4;
+		width: 50%; /*275 / 400*/
+		margin-bottom: 5px;
+		font-size: 13px;
+		padding: 4px 4px 4px 4px;
+		border-radius: 4px;
+		float: right;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		box-shadow: 0px 0px 8px #d9d9d9;
+		-moz-box-shadow: 0px 0px 8px #d9d9d9;
+		-webkit-box-shadow: 0px 0px 8px #d9d9d9;
+	}
+
+	.styled-button_contact_us { /*Shrink Contact Info Button Size*/
+		-webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 0 0;
+		-moz-box-shadow: rgba(0,0,0,0.2) 0 1px 0 0;
+		box-shadow: rgba(0,0,0,0.2) 0 1px 0 0;
+		border-bottom-color: #333;
+		border: 1px solid #61c4ea;
+		background-color: #7cceee;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		color: #333;
+		font-family: 'Verdana',Arial,sans-serif;
+		font-size: 14px;
+		text-shadow: #b2e2f5 0 1px 0;
+		padding: 5px;
+		float: right;
+		clear: both;
+	}
+	/*NOT USED*/
+	.contact_us_div {
+		vertical-align: middle;
+	}
+
+	.labelClass_contact_us { /*Style Labels*/
+		display: inline-block;
+		float: none;
+	}
+
+	.slide-text p { /*Disable Words in Slider*/
+		display: none;
+	}
+
+	h3.frontpage_heading, h1.pagetitle {
+		background: url(../images/seperator.png) repeat-x bottom;
+		padding-bottom: 0px;
+		font-size: 1.8em;
+		font-weight: normal;
+		letter-spacing: normal;
+		color: #333;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	h1.pagetitle { /*Title Styling for Services, Contact, and Dentists Pages*/
+		text-align: center;
+		font-size: 2.5em;
+		background: url(../images/seperator.png) repeat-x bottom;
+		padding-bottom: 8px;
+		font-weight: normal;
+		letter-spacing: normal;
+		color: #333;
+		margin-bottom: 15px;
+	}
+
+	.list_text { /* hide list text from accounment tab*/
+		visibility: hidden;
+	}
+
+	#screen { /*Disable Javascript Slider*/
+		display: none;
+	}
+
+	#serviceimage { /*Shrink Service Image Margins and Enlarge Image on Services and Dentist Pages Create Border for Emphasis*/
+		margin-left: 20%;
+		margin-right: 20%;
+		width: 60%;
+		border: 2px solid;
+		border-radius: 8px;
+	}
+
+	img.servicepage_image4 /* Front Page Image*/ {
+		display: normal;
+		float: none;
+		display: block;
+		margin-left: 20%;
+		margin-right: 20%;
+		width: 60%;
+		margin-bottom: 15px;
+	}
+
+	/*Sign Up Page Responsive*/
+	#form_container_signup2 {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%; /*250 / 960*/
+		float: none;
+	}
+
+	#form_container_signUp {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%; /*250 / 960*/
+		float: none;
+		height: 50%;
+	}
+
+	#form_container { /* Generic Container for all Forms */
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%; /*250 / 960*/
+		float: none;
+	}
+
+	#form_container_left {
+		height: 19em;
+		width: 60%;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+
+	.roundtextbox_appointment { /*Responsive Textbox for Appointment Page*/
+		border: 1px solid #c4c4c4;
+		height: 25px;
+		max-width: 88%; /*275 --> 220/250*/
+		font-size: 13px;
+		margin-left: 20px;
+		padding: 4px 4px 4px 4px;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		box-shadow: 0px 0px 8px #d9d9d9;
+		-moz-box-shadow: 0px 0px 8px #d9d9d9;
+		-webkit-box-shadow: 0px 0px 8px #d9d9d9;
+	}
+
+	
+
+	.styled-button_margin {
+	
+     width: 25%;
+	 margin-left: 37.5%;
+	 margin-right: 37.5%;
+   }
+	.styled-button_signUp {
+	
+     width: 25%;
+	 margin-left: 37.5%;
+	 margin-right: 37.5%;
+   }
+	/*Matt*/
+}
+	@media only screen and (max-width: 580px) { /*Media Query for Mobile Devices*/
+
+		/*CSS for navigation ends*/
+		#container { /*Shrink Container (Main Content Area)*/
+			width: 90%;
+			height: 100%;
+			position: relative;
+		}
+
+		#screen { /*Disable Javascript Slider*/
+			display: none;
+		}
+
+		/*
+	#staticscreen {
+		visibility: visible;
+		height: auto;
+		width: 50%;
+	}
+		*/
+		/* #container {
+       
+        width: auto;
+        height: auto;
+        
+    }
+*/
+
+
+		#left, #right, #middle { /*Shrink Columns by decreasing Margin Sizes (Index, Services, Dentists)*/
+			margin-left: 20%;
+			margin-right: 20%;
+			width: 60%;
+			margin-bottom: 15px;
+		}
+
+		/*Matt*/
+
+		#page_wrap { /*Responsive Page Wrap*/ /*Defines the header region.*/
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		#logo { /*Enlarge Logo Div Area*/
+			width: 100%;
+			height: 100%;
+		}
+
+
+		#left_dentist, #right_dentist, #middle_dentist { /*Shrink Columns by decreasing Margin Sizes (Services, Dentists)*/
+			margin-left: 20%;
+			margin-right: 20%;
+			width: 60%;
+			margin-bottom: 15px;
+		}
+
+
+
+		img.servicepage_image4 /* Front Page Image*/ {
+			margin-left: 10%;
+			margin-right: 10%;
+			width: 80%;
+		}
+
+		img.servicepage_image2 /* Align First Two Images on Service Page on One Row */ {
+			display: none;
+		}
+
+		img.servicepage_image1 /* Align First Two Images on Service Page on One Row */ {
+			display: none;
+		}
+
+		img.servicepage_image /* Align First Two Images on Service Page on One Row */ {
+			display: none;
+			float: none;
+			display: block;
+			margin: auto;
+		}
+
+
+
+		p.servicepage_text { /*Disable Background Image and Padding*/
+			background: none;
+			padding: 0px;
+			text-align: center;
+		}
+		/*Matt*/
+		p.frontpage_text { /*Align Text Left instead of Centered*/
+			text-align: left;
+		}
+
+		h3.frontpage_heading {
+			background: url(../images/seperator.png) repeat-x bottom;
+			padding-bottom: 0px;
+			font-size: 1.8em;
+			font-weight: normal;
+			letter-spacing: normal;
+			color: #333;
+			margin-bottom: 0px;
+		}
+
+		h3.servicepage_header /* Defines Style for Column Titles on Services and Dentists Pages */ {
+			background: url(../images/seperator.png) repeat-x bottom;
+			padding-bottom: 8px;
+			font-size: 1.8em;
+			font-weight: normal;
+			letter-spacing: normal;
+			color: #333;
+			margin-bottom: 0px;
+			text-align: center;
+		}
+
+
+		#contact_info { /*Shrink Margins and Increase Width for Contact Area / Centers Div*/
+			float: none;
+			width: 80%;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 15px;
+		}
+
+
+
+		#form_container_contact_us { /*Shrink Margins and Increase Width for Contact Area / Centers Div*/
+			width: 80%;
+			margin-top: 15px;
+			float: none;
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
+		#form_container_left { /*Appointment Form Container*/
+			height: 19em;
+			width: 80%;
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+
+		.validateappointment { /*Validation CSS for All Forms*/
+			margin-left: 10%;
+		}
+
+		#appointment_text { /*Appointment Paragraph Padding*/
+			padding-left: 4px;
+		}
+
+		.title { /*Center Appointment Title*/
+			text-align: center;
+			
+		}
+		.styled-button_signUp {
+	
+     width: 40%;
+	 margin-left: 30%;
+	 margin-right: 30%;
+   }
+		.styled-button_margin {
+	
+     width: 40%;
+	 margin-left: 30%;
+	 margin-right: 30%;
+   }
+
+			/*Matt*/
+		/*Matt*/
+	}

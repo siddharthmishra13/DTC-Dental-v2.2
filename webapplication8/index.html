@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>DTC Dental</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="style1" />
+
+    <!-- Set viewport for mobile devices -->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+    <!-- JQuery / Javascript Scripts-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript"> /* MOBILE COLLAPSE MENU */
+        (function ($) {
+            $.fn.collapsable = function (options) {
+                // iterate and reformat each matched element
+                return this.each(function () {
+                    // cache this:
+                    var obj = $(this);
+                    var tree = obj.next('.navigation');
+                    obj.click(function () {
+                        if (obj.is(':visible')) { tree.toggle(); }
+                    });
+                    $(window).resize(function () {
+                        if ($(window).width() <= 570) { tree.attr('style', ''); };
+                    });
+                });
+            };
+        })(jQuery);</script>
+    <script src="js/jquery.cycle.all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#slideshow').cycle({
+                timeout: 5000, // milliseconds between slide transitions (0 to disable auto advance)
+                fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...            
+                pager: '#pager', // selector for element to use as pager container
+                pause: 0, // true to enable "pause on hover"
+                pauseOnPagerHover: 0 // true to pause when hovering over pager link
+            });
+            $('#featured').cycle({
+                timeout: 12000, // milliseconds between slide transitions (0 to disable auto advance)
+                fx: 'scrollUp', // choose your transition type, ex: fade, scrollUp, shuffle, etc...                        
+                pause: 0, // true to enable "pause on hover"
+                pauseOnPagerHover: 0 // true to pause when hovering over pager link
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".slide-trigger").collapsable(); // trigger for mobile navigation
+            $(".pane-list li").click(function () {
+                window.location = $(this).find("a").attr("href");
+                return false;
+           
+            });
+        });
+    </script>
+    <!-- End Javascript -->
+</head>
+<!-- End Head -->
+<body>
+    <div id="container"> <!-- Page Container -->
+        <div id="header"> <!-- Header Container -->
+            <div id="page_wrap">
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" class="logo_image" alt="" /></a>
+                </div>
+            </div>
+        </div>
+        <!-- close header -->
+        <div id="h_navcontainer"> <!-- Navigation Container -->
+            <nav class="group">
+                <h2 class="navheader slide-trigger">&#8801 Menu<span></span></h2> <!-- Mobile Navigation Title -->
+                <ul class="navigation group">
+                    <li><a href="index.html" class="sel" id="navbtn">Home</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Dentists.html">Dentists</a></li>
+                    <li><a href="lol.html">Sign In</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </nav>
+            <h2 class="navheader collapse-trigger"><span></span></h2> <!-- Mobile Header Navigation Trigger -->
+            <br />
+            <br />
+        </div>
+        <!-- close h_navcontainer -->
+        <div class="serviceimage"> <!-- image for Mobile Media Queries -->
+                <img src="images/slide4.jpg" class="servicepage_image4 " alt="General Dentistry" />
+        </div>
+        <div id="screen">
+            <!-- BEGIN SLIDER -->
+            <div id="slideshow">
+                <div class="slide-text">
+                    <img src="images/slide1.jpg" alt="" class="slidehalf" />
+                    <h1>Dental Business</h1>
+                    <p>DTC Dental is a growing clinic consisting of 5 dentists. Each dentist provides personal service and a plan tailored to your dental needs. With over 50 years of combined experience, DTC Dental's dentists are sure to provide exception service and leave you 100% satisfied.</p>
+                </div>
+                <!-- end of slide1 -->
+                <div class="slide-text">
+                    <img src="images/slide2.jpg" alt="" class="slidehalf" />
+                    <h1>Success Stories</h1>
+                    <p>DTC Dental has helped over 2,500 patients achieve a healthier smile! Each of our satisfied patients frequently returns to the clinic to receive top quality dental service. They also return to keep their teeth and overall oral health in perfect shape.</p>
+                </div>
+                <!-- end of slide2 -->
+                <div class="slide-text">
+                    <img src="images/slide3.jpg" alt="" class="slidehalf" />
+                    <h1>Learn about Oral Health</h1>
+                    <p>Your oral health is vital to your overall well-being. Dental health is frequently tied to ones overall health and regular dental appointments can lead to a healthier you! Contact us today to schedule your semi-annual cleaning! </p>
+                </div>
+                <!-- end of slide3 -->
+                <div class="slide-text">
+                    <img src="images/slide4.jpg" alt="" class="slidehalf" />
+                    <h1>Meet The Team</h1>
+                    <p>Jeffrey Hill, Alton Watson, Janet Reid, Michael Chandler, and Lori LoVette are here to serve your dental needs. Each dentist has been employed by DTC Dental since it's inception in January 2006 and is certified by the American Dental Association. Contact us today to speak to a dentist and being he process of creating healthier teeth!</p>
+                </div>
+                <!-- end of slide4 -->
+            </div>
+            <div id="box-nav-slider">
+                <div id="slideshow-navigation">
+                    <div id="pager"></div>
+                </div>
+            </div>
+            <!-- END OF SLIDER -->
+        </div>
+        <!-- close screen -->
+        <div id="left"> <!-- Left Content --> 
+            <h3 class="frontpage_heading">Services</h3>
+            <p class="frontpage_text">DTC Dental offers general dentistry, periodontics, and oral and maxillofacial surgery. Services provided by the clinic include: dental cleanings, crowns, partials, dentures, and dental surgery. Each of these services can be provided via sedation dentistry to ensure that your dental experience is a comfortable as possible.  </p>
+        </div>
+        <!-- close left -->
+        <div id="right">  <!-- Right Content --> 
+            <h3 class="frontpage_heading">Announcements!</h3>
+            <ul class="pane-list">
+                <li>
+                    <img src="images/thumb1.jpg" width="46" height="46" alt="" />
+                    <h2 class="list_heading"><a href="appointment.aspx" class="index">Free Dental Check Up</a></h2>
+                    <p class="list_text">Mention this advertisement and receive a free dental check up.</p>
+                </li>
+                <li>
+                    <img src="images/thumb1.jpg" width="46" height="46" alt="" />
+                    <h2 class="list_heading"><a href="appointment.aspx" class="index">Check Appointment Availability</a></h2>
+                    <p class="list_text">Click here to schedule your next appointment with DTC Dental.</p>
+                </li>
+                <li>
+                    <img src="images/thumb1.jpg" width="46" height="46" alt="" />
+                    <h2 class="list_heading"><a href="contact.html" class="index">Chat with us</a></h2>
+                    <p class="list_text">Click here to sent us an email or call our receptionist.</p>
+                </li>
+            </ul>
+        </div>
+        <!-- close right -->
+        <div id="middle"> <!-- Middle Content --> 
+            <h3 class="frontpage_heading">Insurance Info</h3>
+            <p class="frontpage_text">DTC Dental does not currently accept insurance. Payments can be made with check, money order, Visa, Mastercard, American Express, or Paypal. Please see a receptionish at the clinic for more details.</p>
+        </div>
+        <!-- close middle -->
+    </div>
+    
+</body>
+</html>

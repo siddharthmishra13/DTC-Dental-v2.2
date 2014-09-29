@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DTC Dental</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="style1" />
+    <link rel="alternate stylesheet" type="text/css" href="css/style2.css" title="style2" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="css/style3.css" title="style3" media="screen" />
+
+    <!-- Set viewport for mobile devices -->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+    <!-- JQuery / Javascript Scripts-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript"> /* MOBILE COLLAPSE MENU */
+        (function ($) {
+            $.fn.collapsable = function (options) {
+                // iterate and reformat each matched element
+                return this.each(function () {
+                    // cache this:
+                    var obj = $(this);
+                    var tree = obj.next('.navigation');
+                    obj.click(function () {
+                        if (obj.is(':visible')) { tree.toggle(); }
+                    });
+                    $(window).resize(function () {
+                        if ($(window).width() <= 570) { tree.attr('style', ''); };
+                    });
+                });
+            };
+        })(jQuery);</script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $(".slide-trigger").collapsable(); // trigger for mobile navigation
+             $(".pane-list li").click(function () {
+                 window.location = $(this).find("a").attr("href");
+                 return false;
+             });
+         });
+    </script>
+    <!-- End Javascript -->
+</head>
+    <!-- End Head -->
+<body>
+    <div id="container"> <!-- Page Container -->
+        <div id="page_wrap">
+            <div id="header"> <!-- Header Container -->
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" class="logo_image" alt="logo" /></a>
+                </div>
+
+            </div>
+            <!-- close header -->
+             
+           <div id="h_navcontainer"> <!-- Navigation Container -->
+            <nav class="group">
+                <h2 class="navheader slide-trigger">&#8801 Menu<span></span></h2> <!-- Mobile Navigation Title -->
+                <ul class="navigation group">
+                    <li><a href="index.html" class="sel" id="navbtn">Home</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Dentists.html">Dentists</a></li>
+                    <li><a href="lol.html">Sign In</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </nav>
+            <h2 class="navheader collapse-trigger"><span></span></h2> <!-- Mobile Header Navigation Trigger -->
+            <br />
+            <br />
+        </div>
+        <!-- close h_navcontainer -->
+            
+                <h1 class="pagetitle">Dentists</h1>
+            
+            <div class="dentist"> <!-- Dentist Images -->
+                <div class="serviceimage">
+                    <img src="images/Sid.jpg" class="servicepage_image" alt="Michael Chandler" />
+                    <img src="images/Matt.jpg" class="servicepage_image1" alt="Jeffrey Hill" />
+                    <img src="images/Vikram.jpg" class="servicepage_image2" alt="Lori Lovette" />
+                </div>
+                <div id="left"> <!-- Left Content --> 
+                    <h3 class="servicepage_header">Michael Chandler</h3>
+                    <p class="frontpage_text">Michael Chandler is the head dentist at DTC Dental. Michael attended the Texas A&M University Baylor College of Dentistry in Dallas, Texas. Michael graduated at the top of his class in 1988. He joined DTC Dental in 1994. Michael specializes in orthopedic care and pediatric dentistry. </p>
+                </div>
+                <!-- close left -->
+
+                <div id="right"> <!-- Right Content --> 
+                    <h3 class="servicepage_header">Lori Lovette</h3>
+                    <p class="frontpage_text">Lori Lovette graduated from the University of Texas School of Dentistry in Houston, Texas. Lori graduated at the top of her class in 1995. She joined DTC Dental in 1998. Lori specializes in oral surgery and cosmetic dentistry. </p>
+                                    </div>
+                <!-- close right -->
+                <div id="middle"> <!-- Middle Content --> 
+                    <h3 class="servicepage_header">Jeffrey Hill</h3>
+                    <p class="frontpage_text">Jeffrey Hill graduated from the University of Colorado School of Dental Medicine, Aurora. He graduated at the top of his class in 1990. Jeffrey specializes in periodonic denistry. He is currently completing a certifcation program in cosmetic dentistry. </p>
+                </div>
+                <!-- close middle -->
+            </div>
+            <div class="dentist">
+                <div class="serviceimage"> <!-- Dentist Images -->
+                    <img src="images/Haider.jpg" class="servicepage_image1" alt="Janet Reid" />
+                    <img src="images/slide1.jpg" class="servicepage_image1" alt="Alton Watson" />
+                 
+                </div>
+                <div id="left_dentist"> <!-- Left Content Second Row --> 
+                    <h3 class="servicepage_header">Janet Reid</h3>
+                    <p class="frontpage_text">Janet Reid graduated from the University of california, Los Angeles School of Dentistry, Los Angeles in 2004. She graduated at the top of her class. Janet specializes in preventative and general denstistry. </p>
+                </div>
+                <!-- close left -->
+                <div id="middle_dentist"> <!-- Middle Content Second Row --> 
+                    <h3 class="servicepage_header">Alton Watson</h3>
+                    <p class="frontpage_text">Alton Watson graduated from the University of Utah School of Dentistry, Salt Lake City in 2002. He graduated at the top of his class. Alton specializes in general and cosmetic dentistry.</p>
+                </div>
+                <!-- close middle -->
+            </div>
+            <!-- close dentist area-->
+        </div>
+        <!-- close page_wrap -->
+    </div>
+    <!-- close container -->
+
+</body>
+</html>

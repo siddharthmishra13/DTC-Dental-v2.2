@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>DTC Dental</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="style1" />
+    <link rel="alternate stylesheet" type="text/css" href="css/style2.css" title="style2" media="screen" />
+    <link rel="alternate stylesheet" type="text/css" href="css/style3.css" title="style3" media="screen" />
+    <!-- Set viewport for mobile devices -->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+    <!-- JQuery / Javascript Scripts-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript"> /* MOBILE COLLAPSE MENU */
+        (function ($) {
+            $.fn.collapsable = function (options) {
+                // iterate and reformat each matched element
+                return this.each(function () {
+                    // cache this:
+                    var obj = $(this);
+                    var tree = obj.next('.navigation');
+                    obj.click(function () {
+                        if (obj.is(':visible')) { tree.toggle(); }
+                    });
+                    $(window).resize(function () {
+                        if ($(window).width() <= 570) { tree.attr('style', ''); };
+                    });
+                });
+            };
+        })(jQuery);</script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".slide-trigger").collapsable(); // trigger for mobile navigation
+            $(".pane-list li").click(function () {
+                window.location = $(this).find("a").attr("href");
+                return false;
+
+            });
+        });
+    </script>
+    <!-- End Javascript -->
+</head>
+    <!-- End Head -->
+<body>
+    <div id="container"> <!-- Page Container -->
+        <div id="page_wrap">
+            <div id="header"> <!-- Header Container -->
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="logo" class="logo_image" /></a>
+                </div>
+
+            </div>
+            <!-- close header -->
+
+            <div id="h_navcontainer"> <!-- Navigation Container -->
+                <nav class="group">
+                    <h2 class="navheader slide-trigger">&#8801 Menu<span></span></h2> <!-- Mobile Navigation Title -->
+                    <ul class="navigation group">
+                        <li><a href="index.html" class="sel" id="navbtn">Home</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Dentists.html">Dentists</a></li>
+                        <li><a href="lol.html">Sign In</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+
+                    </ul>
+                </nav>
+                <h2 class="navheader collapse-trigger"><span></span></h2> <!-- Mobile Header Navigation Trigger -->
+                <br />
+                <br />
+            </div>
+            <!-- close h_navcontainer -->
+            <div>
+            <h1 class="pagetitle">Services</h1>
+            </div>
+            <div class="serviceimage">
+                <img src="images/slide1.jpg" class="servicepage_image" alt="General Dentistry" />
+                <img src="images/slide1.jpg" class="servicepage_image1" alt="Periodontic Dentistry" />
+                <img src="images/slide1.jpg" class="servicepage_image2" alt="Cosmetic Dentistry" />
+            </div>
+            <div id="left"> <!-- Left Content -->
+
+                <h3 class="servicepage_header">General Dentistry</h3>
+                <p class="servicepage_text">Dental Exams</p>
+                <p class="servicepage_text">Dental Cleanings</p>
+                <p class="servicepage_text">Oral Evaluations</p>
+            </div>
+            <!-- close left -->
+            <div id="right"> <!-- Right Content --> 
+                <h3 class="servicepage_header">Periodontic Dentistry</h3>
+                <p class="servicepage_text">Maintenance</p>
+                <p class="servicepage_text">Root Planning</p>
+                <p class="servicepage_text">Diagnosis</p>
+            </div>
+            <!-- close right -->
+            <div id="middle"> <!-- Middle Content --> 
+                <h3 class="servicepage_header">Cosmetic Dentistry</h3>
+                <p class="servicepage_text">Crowns</p>
+                <p class="servicepage_text">Dentures </p>
+                <p class="servicepage_text">Dental Implants</p>
+            </div>
+            <!-- close middle -->
+        </div>
+    </div>
+</body>
+</html>
